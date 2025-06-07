@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чипитасьён</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #2b2b2b;
+            color: #f0f0f0;
+        }
+
+        .topbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: #444;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .topbar a {
+            color: #ddd;
+            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 18px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .topbar a:hover {
+            background-color: #555;
+            color: #fff;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: #3a3a3a;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .content {
+            display: none;
+            padding: 20px;
+        }
+
+        .content img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 20px;
+            border: 2px solid #555;
+        }
+
+        .content p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #e0e0e0;
+        }
+
+        .active {
+            display: block;
+        }
+
+        h2 {
+            color: #f0f0f0;
+            border-bottom: 2px solid #555;
+            padding-bottom: 10px;
+        }
+
+        a {
+            color: #f0f0f0;
+        }
+
+        @media (max-width: 768px) {
+            .topbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .topbar a {
+                font-size: 16px;
+                padding: 10px;
+            }
+
+            .container {
+                padding: 10px;
+                margin: 10px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .content p {
+                font-size: 14px;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #1a1a1a;
+                color: #e0e0e0;
+            }
+
+            .container {
+                background-color: #2a2a2a;
+            }
+
+            .topbar {
+                background-color: #333;
+            }
+
+            .topbar a:hover {
+                background-color: #444;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="topbar">
+    <a href="#" class="tablink" onclick="openTab(event, 'chipok')">Чипок</a>
+    <a href="#" class="tablink" onclick="openTab(event, 'mother')">Мать чипка</a>
+    <a href="#" class="tablink" onclick="openTab(event, 'father')">Батек чипка</a>
+    <a href="#" class="tablink" onclick="openTab(event, 'grandma')">Бабка чипка</a>
+    <a href="#" class="tablink" onclick="openTab(event, 'sister')">Сестра чипка</a>
+</div>
+
+<div class="container">
+    <div id="chipok" class="content active">
+        <h2>Чипок</h2>
+        <img src="chip1.png" alt="Чипок">
+        <img src="chip2.png" alt="Чипок">
+        <img src="chip3.png" alt="Чипок">
+        <img src="chip4.png" alt="Чипок">
+        <p>Всеми любимый сын грибка.<br>Год рождения: 2010<br>VK: <a href="https://vk.com/id716549896">*кликабельно*</a><br>ФИО: Батин Дмитрий Александрович</p>
+    </div>
+
+    <div id="mother" class="content">
+        <h2>Мать чипка</h2>
+        <img src="mama.png" alt="Мать чипка">
+        <p>Особь с довольно небольшим количеством информации на нее.<br>День рождения: 23 сентября, год не известен.<br>VK: <a href="https://vk.com/id241011634">*кликабельно*</a><br>ФИ: Широкова (Батина) Марина</p>
+    </div>
+
+    <div id="father" class="content">
+        <h2>Батек чипка</h2>
+        <img src="babis.png" alt="Батек чипка">
+        <img src="babis1.png" alt="Батек чипка">
+        <img src="babis2.png" alt="Батек чипка">
+        <p>Грибок, дегродант, жертва унижений от Клепы.<br>День рождения: 3 ноября, год не известен.<br>Учился в ПсковГУ<br>ФИ: Батин Александр<br>VK: <a href="https://vk.com/id88357">*кликабельно*</a></p>
+    </div>
+
+    <div id="grandma" class="content">
+        <h2>Бабка чипка</h2>
+        <img src="babka1.png" alt="Бабка чипка">
+        <img src="babka2.png" alt="Бабка чипка">
+        <img src="babka3.png" alt="Бабка чипка">
+        <p>Старая дура.<br>Хз где живет, но вроде в урине.<br>День рождения: 25 июня 1959 г.<br>Родной город: Рязань<br>ФИ: Батина Елена<br>VK: <a href="https://vk.com/id37693669">*кликабельно*</a></p>
+    </div>
+
+    <div id="sister" class="content">
+        <h2>Сестра чипка</h2>
+        <img src="sister.png" alt="Сестра чипка">
+        <p>Невероятно малое количество информации.<br>ФИО: Батина Мария Александровна<br>VK: <a href="https://vk.com/id821654361">*кликабельно*</a></p>
+    </div>
+</div>
+
+<script>
+    function openTab(event, tabName) {
+        var i, content, tablinks;
+
+        content = document.getElementsByClassName("content");
+        for (i = 0; i < content.length; i++) {
+            content[i].style.display = "none";
+        }
+
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+        }
+
+        document.getElementById(tabName).style.display = "block";
+        event.currentTarget.style.backgroundColor = "#555";
+    }
+
+    // Show default tab on page load
+    document.getElementById("chipok").style.display = "block";
+</script>
+
+</body>
+</html>
